@@ -1,6 +1,6 @@
 <?php
 
-
+define('IN','admin.php');
 session_start();
 include('functions.php');
 // check_login();
@@ -13,7 +13,7 @@ include('functions.php');
 2、加载相应的功能模块
 */
 
-$action=isset($_GET['a'])?$_GET['a']:'main';
+$action=!empty($_GET['a'])?$_GET['a']:'main';
 //3、登录权限验证
 $noNeedLogin=['login','dologin'];
 if(!in_array($action,$noNeedLogin)){

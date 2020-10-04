@@ -23,7 +23,7 @@ foreach($account as $v){
 // </script>
 // JS;
 // exit;
-        message('登录成功！','index.php');
+        message('登录成功！','');
     }
 }
 // echo <<<JS
@@ -33,4 +33,4 @@ foreach($account as $v){
 // </script>
 // JS;
 // exit;
-message('登录或密码错误!','index.php?a=login');
+message('登录或密码错误!','login');
