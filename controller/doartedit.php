@@ -1,0 +1,12 @@
+<?php
+//1、接收
+$oldtitle=$_POST['oldtitle'];
+$title=$_POST['title'];
+$content=$_POST['content'];
+//2、如何知道原来的文件名？把原文件名也传过来
+var_dump($_POST);
+//将新的内容写入原文件中
+file_put_contents('./data/arts'.$oldtitle,$content);
+//3、修改原文件名为新的文件名
+rename('./data/arts/'.$oldtitle,'./data/arts/'.$title);
+message('修改成功!','index.php?a=artlist');
