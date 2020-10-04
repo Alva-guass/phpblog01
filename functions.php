@@ -27,3 +27,7 @@ function check_login()
 function view($name){
     include('view/admin/'.$name.'.html');
 }
+//前台加载
+function template($name){
+    include('view/index/'.$name.'.html');
+}
